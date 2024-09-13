@@ -11,7 +11,7 @@ import purchaseRoutes from './routes/purchaseRoutes.js';
 import expenseRoutes from './routes/expenseRoutes.js';
 import supplierRoutes from './routes/supplierRoutes.js';
 import reportRoutes from './routes/reportRoutes.js';
-
+import contactRoute from "./routes/contactRoute.js"
 
 // Load environment variables
 dotenv.config();
@@ -39,6 +39,7 @@ app.use('/api/purchases', purchaseRoutes);
 app.use('/api/expenses', expenseRoutes);
 app.use('/api/suppliers', supplierRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/contact', contactRoute);
 
 // Basic route
 app.get('/', (req, res) => {
